@@ -22,6 +22,14 @@ Works out of box after adding:
 
     require 'active_resource/persistent'
 
+## Testing
+
+Currently we use passenger server because it provides REMOTE_PORT enviroment variable.
+Thus we can ensure that connections are persistent.
+
+    $ bundle
+    $ bundle exec rspec -fs -c spec
+
 ## References
 
 * [activeresource](https://github.com/rails/activeresource)
