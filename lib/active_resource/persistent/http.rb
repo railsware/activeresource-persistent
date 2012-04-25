@@ -8,6 +8,8 @@ module ActiveResource
         @site = site
       end
 
+      attr_reader :site
+
       def get(path, headers)
         req = Net::HTTP::Get.new(path, headers)
         request(@site, req)
