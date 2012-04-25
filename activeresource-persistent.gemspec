@@ -11,7 +11,7 @@ Gem::Specification.new do |gem|
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.name          = "activeresource-persistent"
   gem.require_paths = ["lib"]
-  gem.version       = "0.0.1"
+  gem.version       = "0.1.0"
 
   gem.add_runtime_dependency 'net-http-persistent', '>=2.5'
   gem.add_runtime_dependency 'activeresource', '>=2.3.0'
