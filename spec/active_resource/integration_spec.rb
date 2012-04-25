@@ -38,8 +38,14 @@ describe %q(
   end
 
   it "Updating different resources from the same site" do
-    user = TestUser.find("101").update_attribute(:username, "jack")
-    post = TestPost.find("202").update_attribute(:title, "hi")
+    user = TestUser.find("101")
+    post = TestPost.find("202")
+
+    user.username = "jack"
+    post.title = "hi"
+
+    user.save
+    post.save
    
     TestHelper.logged_requests.size.should == 4
     TestHelper.persistent_requests_logged?.should be_true

@@ -3,7 +3,7 @@ require 'spec_helper'
 describe ActiveResource::Connection do
   let(:site) { TestServer.uri }
 
-  let(:instance) { described_class.new(site) }
+  let(:instance) { described_class.new(site, ActiveResource::Formats[:json]) }
   
   describe "#http" do
     subject { instance.send(:http) }
@@ -30,7 +30,7 @@ describe ActiveResource::Connection do
     let(:body) { 'HELLO WORLD' }
     let(:headers) { { 'X_Header' => 'x_value' } }
     let(:http_mock) { mock('HTTP MOCK') }
-    let(:response_mock) { mock('RESPONSE MOCK', :code => '200') }
+    let(:response_mock) { mock('RESPONSE MOCK', :code => '200', :body => '') }
 
     describe "#head" do
       it "should use ActiveResource::Persistent::HTTP#head" do
