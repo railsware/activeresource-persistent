@@ -13,6 +13,18 @@ describe ActiveResource::Connection do
     end
   end
 
+  describe "#new_http" do
+    specify { instance.send(:new_http).should be_instance_of(ActiveResource::Persistent::HTTP) }
+  end
+
+  describe "#new_http_with_persistent" do
+    specify { instance.send(:new_http_with_persistent).should be_instance_of(ActiveResource::Persistent::HTTP) }
+  end
+
+  describe "#new_http_without_persistent" do
+    specify { instance.send(:new_http_without_persistent).should be_instance_of(Net::HTTP) }
+  end
+
   context "request methods" do
     let(:path) { '/inspect' }
     let(:body) { 'HELLO WORLD' }
