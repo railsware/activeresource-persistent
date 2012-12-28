@@ -22,7 +22,7 @@ module TestServer
 
   def start
     @pid = POSIX::Spawn.spawn("passenger start --port #{port}", :out => 'test_server.output')
-    sleep(1)
+    sleep(5)
   end
 
   def stop
