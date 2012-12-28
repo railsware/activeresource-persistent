@@ -36,6 +36,17 @@ module ActiveResource
         req = Net::HTTP::Head.new(path, headers)
         request(@site, req)
       end
+
+      ##
+      # SSL support
+      #
+
+      def use_ssl=(value)
+        expected_scheme = value ? 'https' : 'http'
+        site.scheme == expected_scheme or
+          raise ArgumentError, "Site scheme should be #{expected_scheme.inspect}"
+      end
+
     end
   end
 end

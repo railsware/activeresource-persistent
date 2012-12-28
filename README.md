@@ -30,6 +30,23 @@ Works out of box after adding:
 
     require 'active_resource/persistent'
 
+## SSL Support
+
+Supported ActiveResource ssl options:
+
+* ca_file
+* cert
+* cert_store
+* key
+* verify_mode
+* verify_callback
+
+Unsupported ActiveResource ssl options:
+
+* ca_path
+* ssl_timeout
+* verify_depth
+
 ## Testing
 
 Currently we use passenger server because it provides REMOTE_PORT enviroment variable.
