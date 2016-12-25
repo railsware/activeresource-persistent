@@ -2,7 +2,7 @@ module TestIPC
   extend self
 
   def filename
-    @filename = File.expand_path('../../../tmp/test_ipc.text', __FILE__)
+    @filename ||= File.expand_path('../../../test_ipc.text', __FILE__)
   end
 
   def clear
