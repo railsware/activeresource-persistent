@@ -9,6 +9,7 @@ Tested with ActiveResource:
 * v3.1.4
 * v3.2.3
 * v3.2.9
+* v4.1.0
 
 ## Installation
 
@@ -54,8 +55,8 @@ Thus we can ensure that connections are persistent.
 
 Before start suite ensure that passenger gem are installed correctly.
 
-    $ BUNDLE_GEMFILE=Gemfile_3.2.9 bundle
-    $ BUNDLE_GEMFILE=Gemfile_3.2.9 bundle exec passenger start
+    $ BUNDLE_GEMFILE=Gemfile_4.1.0 bundle
+    $ BUNDLE_GEMFILE=Gemfile_4.1.0 bundle exec passenger start
 
 Run tests with:
 
@@ -67,16 +68,19 @@ Run tests with:
     $ rake test:gemfile_3.1.4   # Testing with Gemfile_3.1.4
     $ rake test:gemfile_3.2.3   # Testing with Gemfile_3.2.3
     $ rake test:gemfile_3.2.9   # Testing with Gemfile_3.2.9
+    $ rake test:gemfile_4.1.0   # Testing with Gemfile_4.1.0
+
+
+## Authors
+
+* [Andriy Yanko](http://ayanko.github.io)
+
+## License
+
+* Copyright (c) 2013 Railsware [www.railsware.com](http://www.railsware.com)
+* [MIT](www.opensource.org/licenses/MIT)
 
 ## References
 
 * [activeresource](https://github.com/rails/activeresource)
 * [net-http-persistent](https://github.com/drbrain/net-http-persistent)
-
-## Contributing
-
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Added some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
