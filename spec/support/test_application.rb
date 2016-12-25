@@ -1,3 +1,4 @@
+require 'yaml'
 require 'sinatra'
 require 'multi_json'
 
@@ -121,7 +122,7 @@ class TestApplication < Sinatra::Base
     end
 
     content_type :text
-    body payload.to_yaml
+    body YAML.dump(payload)
     halt 200
   end
 end
