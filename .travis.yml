@@ -2,6 +2,8 @@ rvm:
   - 2.1.10
   - 2.2.6
   - 2.3.3
+gemfile:
+  - Gemfile_4.1.0
 cache: bundler
 script:
-  - BUNDLE_GEMFILE=Gemfile_4.1.0 bundle exec rspec
+  - bundle exec rspec
