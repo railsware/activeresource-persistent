@@ -18,5 +18,6 @@ RSpec.configure do |config|
 
   config.after(:suite) do
     TestServer.stop
+    TestServer.print_output
   end
 end
