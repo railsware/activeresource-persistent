@@ -1,5 +1,7 @@
 # ActiveResource::Persistent
 
+[![Build Status](https://travis-ci.org/railsware/activeresource-persistent.svg?branch=master)](https://travis-ci.org/railsware/activeresource-persistent)
+
 HTTP persistent connection support for ActiveResource.
 
 Tested with ActiveResource:
